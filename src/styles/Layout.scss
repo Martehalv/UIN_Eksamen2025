@@ -93,6 +93,11 @@ h1 {
   }
 }
 
+//Gi farge til hjerte når den blir trykket
+.fa-solid.fa-heart {
+  color: red;
+}
+
 .event-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); //maks 3 grid
