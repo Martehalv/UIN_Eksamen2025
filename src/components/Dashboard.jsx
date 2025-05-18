@@ -1,9 +1,5 @@
-import { useState } from "react";
-
-export default function Dashboard() {
-  //Bruker useState til å finne ut om brukeren er logget inn eller ikke
-  const [isloggedIn, setIsLoggedIn] = useState(false);
-
+//Hente props fra app.jsx (useState)
+export default function Dashboard({ setIsLoggedIn, isLoggedIn }) {
   //Funksjon som settes i gang når brukeren trykker på logg inn (uten at siden lastes inn på nytt: preventDefault)
   const buttonClick = (event) => {
     //https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event hjulpet litt med funksjonen.
@@ -19,10 +15,10 @@ export default function Dashboard() {
   return (
     <section className="loggin">
       {/*Bytter overskrift i forhold til om man er logget inn eller ikke */}
-      <h1>{isloggedIn ? "Min side" : "Logg inn"}</h1>
+      <h1>{isLoggedIn ? "Min side" : "Logg inn"}</h1>
 
       {/*Skjemaet blir bare vist hvis brukeren ikke er logget inn. */}
-      {!isloggedIn && (
+      {!isLoggedIn && (
         <form onSubmit={buttonClick}>
           {" "}
           {/*https://www.w3schools.com/jsref/event_onsubmit.asp hjulpet med onsubmit. */}

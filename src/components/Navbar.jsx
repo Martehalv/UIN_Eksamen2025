@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({ isLoggedIn }) {
   return (
     <nav className="navigation">
       <p className="logo-home">
@@ -12,7 +12,8 @@ export default function Nav() {
         <Link to="/category/teater">Teater/Show</Link>
       </p>
       <p>
-        <Link to="/dashboard">Logg inn</Link>
+        {/*Se om brukeren er logget inn eller ikke, velger tittel ut i fra det. */}
+        <Link to="/dashboard">{isLoggedIn ? "Min side" : "Logg inn"}</Link>{" "}
       </p>
     </nav>
   );
