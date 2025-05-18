@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Nav() {
   return (
     <nav className="navigation">
       <p className="logo-home">
