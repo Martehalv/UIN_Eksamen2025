@@ -43,6 +43,94 @@ h1 {
   gap: 2.5rem;
 }
 
+//CSS for Home siden
+.festival-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.festival-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: white;
+  text-align: center;
+}
+
+.festival-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.festival-card button {
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.home-container button {
+  background-color: #010101;
+  color: #fff;
+  padding: 0.8rem;
+}
+
+//Css for CategoryPage
+.category-section {
+  padding: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); //maks 3 grid
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.event-card {
+  border-radius: 8px;
+  background: #fff;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 180px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: #010101;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #010101;
+  }
+}
+
 //CSS for Dashboard
 .loggin {
   padding: 2rem;
@@ -67,5 +155,8 @@ h1 {
   .navigation {
     flex-direction: column;
     align-items: center;
+  }
+  .event-grid {
+    grid-template-columns: 1fr;
   }
 }
