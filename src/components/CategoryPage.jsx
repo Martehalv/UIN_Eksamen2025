@@ -44,9 +44,9 @@ export default function CategoryPage() {
 
   return (
     <section className="category-section">
-      <h1>Attraksjoner i {slug}</h1>
-      <ul className="event-grid">
-        {events.map((event) => (
+      <h1>Attraksjoner i {slug}</h1> {/*Overskrift og slug for å få dynamisk navn*/}
+      <ul className="event-grid">  {/*Liste med navn*/}
+        {events.map((event) => ( //Rendrer EventCard komponenten for hvert event og sender info til benevnte ting 
           <EventCard
             key={event.id}
             event={event}
@@ -58,7 +58,7 @@ export default function CategoryPage() {
 
     <footer>
         <p>Levert av {" "}
-            <a href="https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/">
+            <a href="https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/"> {/*Gjør teksten til en link*/}
             TicketMaster Discovery API 
             </a>
         </p>
