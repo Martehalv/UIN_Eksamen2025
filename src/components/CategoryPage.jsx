@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import EventCard from "./EventCard";
 
 export default function CategoryPage() {
   const { slug } = useParams(); //Slug (brukes til å vises hvilken kategori brukeren ser på)
@@ -46,24 +47,16 @@ export default function CategoryPage() {
       <h1>Attraksjoner i {slug}</h1>
       <ul className="event-grid">
         {events.map((event) => (
-          <li key={event.id} className="event-card">
-            {event.images?.[0]?.url && (
-              <img src={event.images[0].url} alt={event.name} width="200" />
-            )}
-            <h3>{event.name}</h3> {/* Viser navn på event */}
-              {/*Sette icon under bilde kilde: https://legacy.reactjs.org/docs/handling-events.html */}
-            <button onClick={() => handleToggleWishlist(event)}>
-              {wishlist.some((e) => e.id === event.id) ? (
-                <i className="fa-solid fa-heart"></i> 
-              ) : (
-                <i className="fa-regular fa-heart"></i>  //endrer ikon når den trykkes på
-              )}
-            </button>
-          </li>
+          <EventCard
+            key={event.id}
+            event={event}
+            isWishlisted={wishlist.some((e) => e.id === event.id)}
+            onToggleWishlist={handleToggleWishlist}
+          />
         ))}
       </ul>
 
-          <footer>
+    <footer>
         <p>Levert av {" "}
             <a href="https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/">
             TicketMaster Discovery API 
