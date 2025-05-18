@@ -13,7 +13,7 @@ export default function Nav({ isLoggedIn }) {
       </p>
       <p>
         {/*Se om brukeren er logget inn eller ikke, velger tittel ut i fra det. */}
-        <Link to="/dashboard">{isLoggedIn ? "Min side" : "Logg inn"}</Link>{" "}
+        <Link to="/dashboard">{isLoggedIn ? "Min side" : "Logg inn"}</Link>
       </p>
     </nav>
   );
