@@ -62,6 +62,14 @@ export default function CategoryPage() {
           </li>
         ))}
       </ul>
+
+          <footer>
+        <p>Levert av {" "}
+            <a href="https://developer.ticketmaster.com/products-and-docs/apis/discovery-api/v2/">
+            TicketMaster Discovery API 
+            </a>
+        </p>
+    </footer>
     </section>
   );
 }

@@ -51,8 +51,20 @@ export default function Home() {
           </div>
         ))}
       </div>
+    
+    {/*Footer er IKKE ChatGPT*/}
+    <footer>
+        <p>Levert av {" "}
+            <a href="https://developer.ticketmaster.com/api-explorer/v2/">
+            TicketMaster API Explorer
+            </a>
+        </p>
+    </footer>
+
+
     </div>
   );
 }
+
 
 
