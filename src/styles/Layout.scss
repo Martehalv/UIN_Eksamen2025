@@ -11,6 +11,11 @@ body,
   min-height: 100vh;
 }
 
+h1 {
+  padding: 1rem;
+  font-size: 20px;
+}
+
 //CSS for Nav
 .navigation {
   display: flex;
@@ -36,4 +41,31 @@ body,
 .categories {
   display: flex;
   gap: 2.5rem;
+}
+
+//CSS for Dashboard
+.loggin {
+  padding: 2rem;
+
+  input {
+    background-color: #fff;
+    color: #010101;
+  }
+
+  button {
+    background-color: #010101;
+    color: #fff;
+  }
+}
+
+//CSS for mobil
+@media (max-width: 900px) {
+  h1 {
+    font-size: 23px;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
